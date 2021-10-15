@@ -1,0 +1,18 @@
+<form class="form" #f="ngForm" (ngSubmit)="signin(f)" >
+    
+    <div class="form-control">
+        <label>Your email</label>
+        <input ngModel name="email" #email="ngModel" type="email" required email>
+    </div>
+
+    <div class="form-control">
+        <label>Your password</label>
+        <input ngModel name="password" #password="ngModel" type="password" required minlength="6">
+    </div>
+
+    <div class="form-control">
+        <button>Login</button>
+        <br>
+        <button   routerLink="/signup">Signup</button>
+    </div>
+</form>

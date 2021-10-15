@@ -1,0 +1,11 @@
+<div *ngFor="let product of cart, index as i">
+    <h2>{{product.name}}</h2>
+    <h3>{{product.price * product.numOfIterms}}</h3>
+    <h2>{{product.numOfIterms}}</h2>
+    <div>========================</div>
+
+</div>
+<div>
+    <h4>{{getTotal()}}</h4>
+    <button routerLink="/checkout">Checkout</button>
+</div>

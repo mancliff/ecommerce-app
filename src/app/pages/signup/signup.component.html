@@ -1,0 +1,29 @@
+<form class="form" #f="ngForm" (ngSubmit)="signup(f)" >
+    <div class="form-control">
+        <label>Your first name</label>
+        <input ngModel name="firstName" #firstName="ngModel" type="text" required>
+    </div>
+    <div class="form-control">
+        <label>Your last name</label>
+        <input ngModel name="lastName" #secondName="ngModel" type="text" required>
+    </div>
+    <div class="form-control">
+        <label>Your email</label>
+        <input matInput ngModel name="email" #email="ngModel" type="email" required email>
+    </div>
+
+    <div class="form-control">
+        <label>Your password</label>
+        <input matInput ngModel name="password" #password="ngModel" type="password" required minlength="6">
+    </div>
+    <div class="form-control">
+        <label>Confirm password</label>
+        <input matInput ngModel name="ConfirmPassword" #ConfirmPassword="ngModel" type="password" required minlength="6">
+    </div>
+
+    <div class="form-control">
+        <button class="register-button" mat-button >Signup</button>
+        <br>
+        <button class="register-button" [disabled]="f.invalid || ConfirmPassword.value !== password.value" routerLink="/signup">Login</button>
+    </div>
+</form>
