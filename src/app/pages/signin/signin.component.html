@@ -1,4 +1,22 @@
-<form class="form" #f="ngForm" (ngSubmit)="signin(f)" >
+<div class="container">
+    <h2>Login</h2>
+    <div class="sub-container">
+        <form #f="ngForm" (ngSubmit)="signin(f)">
+           
+            <label for="email">Email</label>
+           <input ngModel name="email" #email="ngModel" type="email" required>
+            
+            <label for="password">Password</label>
+            <input ngModel name="password" #password="ngModel" type="password" required required minlength="6">
+            
+            <button>Login</button>
+            <div class="next-option">
+                <p>Don't have an Account?<a routerLink="/signup"> Register</a></p>
+            </div>
+          </form>
+    </div>
+  </div>
+<!-- <form class="form" #f="ngForm" (ngSubmit)="signin(f)" >
     
     <div class="form-control">
         <label>Your email</label>
@@ -15,4 +33,4 @@
         <br>
         <button   routerLink="/signup">Signup</button>
     </div>
-</form>
+</form> -->

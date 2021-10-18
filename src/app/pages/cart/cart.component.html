@@ -1,11 +1,28 @@
-<div *ngFor="let product of cart, index as i">
-    <h2>{{product.name}}</h2>
-    <h3>{{product.price * product.numOfIterms}}</h3>
-    <h2>{{product.numOfIterms}}</h2>
-    <div>========================</div>
-
+<div class="shopping-cart">
+    <div class="box" *ngFor="let product of cart, index as i">
+        <img [src]="product.imgUrl"  alt="">
+        <div class="content">
+            <h1>{{product.name}}</h1>
+            <div class="sub-content">
+                <span class="price">{{product.price}}</span><br>
+                <span class="quantity">Qty: {{product.numOfIterms}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="amount-content">
+        <div>the shoppp</div>
+    </div>
 </div>
-<div>
-    <h4>{{getTotal()}}</h4>
-    <button routerLink="/checkout">Checkout</button>
-</div>
+<!-- <div class="container">
+    <div *ngFor="let product of cart, index as i">
+        <h2>{{product.name}}</h2>
+        <h3>{{product.price * product.numOfIterms}}</h3>
+        <h2>{{product.numOfIterms}}</h2>
+        <div>========================</div>
+    
+    </div>
+    <div>
+        <h4>{{getTotal()}}</h4>
+        <button routerLink="/checkout">Checkout</button>
+    </div>
+</div> -->

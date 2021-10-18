@@ -1,5 +1,20 @@
 
+<div class="container">
+
+
+    <img [src]="imageUrl" alt="">
+    <div class="details">
+        <h1>{{name}}</h1>
+        <h3>{{price}}</h3>
+        <input type="number" min="1"><br>
+        <button class="btn" (click)="callAddtoCart(product)">add to cart</button>
+        <p>{{description}}</p>
+    </div>
+
+
+</div>
+<!-- 
 <h2>{{name}}</h2>
 <h3>{{price}}</h3>
-<button (click)="callAddtoCart(product)">Add to cart</button>
+<button (click)="callAddtoCart(product)">Add to cart</button> -->
 

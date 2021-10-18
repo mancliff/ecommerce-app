@@ -1,23 +1,34 @@
+<section class="home" id="home">
 
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="/src/assets/images/one.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="/src/assets/images/two.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="/src/assets/images/three.jpg" class="d-block w-100" alt="...">
-      </div>
-    </div>
+  <div class="content">
+      <h3>Wide range <span>of</span> amazing deals</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam libero nostrum veniam facere tempore nisi.</p>
+      <a href="#" class="btn">shop now</a>
   </div>
+
+</section>
+
+<section class="products" id="products">
+
+    <h1 class="heading"> our <span>products</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box" *ngFor="let product of products; index as i">
+            <img [src]="product.imgUrl" alt="">
+            <h3>{{product.name}}</h3>
+            <p>{{product.description}}</p>
+            <a href="#" class="btn" routerLink="/product-view" (click)="addToView(product)">view more</a>
+        </div>
+
+    </div>
+</section>
+
 <!-- <p>home works!</p>
 <div class="card" *ngFor="let product of products; index as i">
     <h2>{{product.name}}</h2>
     <strong>{{product.price}}</strong>
     <button (click)="addToView(product)" routerLink="/product-view">buy</button>
-    <button routerLink="/cart">go to cart</button>
+   
     
 </div> -->
-

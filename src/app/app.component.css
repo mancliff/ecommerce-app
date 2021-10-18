@@ -1,0 +1,164 @@
+.header{
+    position:fixed;
+    top: 0; left:0;
+    right:0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    
+
+}
+
+.header .logo{
+    font-size: 3.1rem;
+    font-weight: bolder;
+    color:var(--black);
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+.header .logo{
+    color: var(--blue);
+    margin-right: 5px;
+}
+
+.header .navbar{
+    margin-left: 0px;
+}
+
+.header .navbar a{
+    float: left;
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin: 0 1rem;
+    color: var(----black);
+    text-decoration: none;
+    
+}
+
+.header .navbar a:hover{
+    color: var(--blue);
+}
+
+.header .icons div{
+    height: 4.7rem;
+    width: 4.7rem;
+    line-height: 4.5rem;
+    /* border-radius: .5rem; */
+    /* background: #eee; */
+    color:var(--black);
+    float: right;
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+.header .icons div{
+    margin-left: 80px;
+    
+}
+/* .header .icons div span{
+    height: 4.7rem;
+    width: 4.7rem;
+} */
+
+.header .icons div span img{
+    width: 100%;
+} 
+
+.header .icons div:hover{
+    background: var(--blue);
+    border-radius: .5rem;
+    color:#fff;
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .search-form{
+    margin-top: 200px;
+    position: absolute;
+    top:110%; right:-110%;
+    width: 50rem;
+    height:5rem;
+    background: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.header .search-form.active{
+    right:2rem;
+    transition: .4s linear;
+}
+
+.header .search-form input{
+    height:100%;
+    width:100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color:var(--black);
+    padding:0 1.5rem;
+}
+
+.header .search-form label{
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color:var(--black);
+    cursor: pointer;
+}
+
+.header .search-form label:hover{
+    color:var(--blue);
+}
+
+/*media query*/
+@media (max-width:991px){
+
+    .header{
+        padding: 2rem;
+    }
+  
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display:inline-block
+    }
+
+    .header .navbar{
+
+        position: absolute;
+        top:110%; right: 1.2em;
+        padding-right: 10.2rem;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: #fff;
+    }
+
+    .header .navbar.active{
+        right:2rem;
+        transition: .4s linear;
+    }
+
+    .header .navbar a{
+
+        font-size: 2rem;
+        margin: 1.6rem 2.5rem;
+        display: block;
+    }
+
+    
+}

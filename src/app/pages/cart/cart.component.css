@@ -1,0 +1,43 @@
+.shopping-cart{
+    display: flex;
+    margin: 150px;
+    
+}
+
+.shopping-cart .box{
+    display: flex;
+    background: #fff;
+    margin-bottom: 15px;
+    height: 250px;
+
+}
+
+.shopping-cart .box .content{
+    display: flex;
+    margin-left: 100px;
+}
+
+.shopping-cart .box .content .sub-content{
+    margin-left: 450px;
+    margin-top: 5px;
+}
+
+.shopping-cart .box .content .sub-content .price{
+    font-weight: bolder;
+    font-size: 35px;
+
+}
+.shopping-cart .box .content .sub-content .quantity{
+    font-size: 25px;
+
+}
+
+.shopping-cart .amount-content{
+   
+    background: #fff;
+    margin-bottom: 15px;
+    margin-left: 35px;
+    height: 250px;
+    width: 400px;
+
+}
